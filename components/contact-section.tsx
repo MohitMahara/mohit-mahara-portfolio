@@ -20,14 +20,11 @@ export function ContactSection() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000))
 
-    // Reset form
     setFormData({ name: "", email: "", message: "" })
     setIsSubmitting(false)
 
-    // Show success message (you can implement toast notifications here)
     alert("Message sent successfully!")
   }
 
@@ -39,17 +36,17 @@ export function ContactSection() {
   }
 
   return (
-    <section className="py-24 px-4 bg-gray-50">
+    <section className="py-24 px-4 bg-customBlack">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-bold text-4xl md:text-5xl mb-4 text-black">Get In Touch</h2>
-          <p className="text-gray-600 text-lg">Have a project in mind? Let's discuss how we can work together.</p>
+          <h2 className="text-4xl mb-4 text-gray-300">Get In Touch</h2>
+          <p className="text-gray-300 text-lg">Have a project in mind? Let's discuss how we can work together.</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-white rounded-lg border border-gray-200 p-8 space-y-6 shadow-sm">
+        <form onSubmit={handleSubmit} className="bg-black rounded-lg border border-white/20 p-8 space-y-6 shadow-sm">
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-700">
+              <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-400">
                 Name
               </label>
               <Input
@@ -58,12 +55,12 @@ export function ContactSection() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                className=" border border-white/10"
                 placeholder="Your name"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-700">
+              <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-400">
                 Email
               </label>
               <Input
@@ -73,14 +70,14 @@ export function ContactSection() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                className="border border-white/10"
                 placeholder="your.email@example.com"
               />
             </div>
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium mb-2 text-gray-700">
+            <label htmlFor="message" className="block text-sm font-medium mb-2 text-gray-400">
               Message
             </label>
             <Textarea
@@ -90,7 +87,7 @@ export function ContactSection() {
               onChange={handleChange}
               required
               rows={5}
-              className="border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 resize-none"
+              className="border-1 border-white/10 focus:outline-none resize-none"
               placeholder="Tell me about your project..."
             />
           </div>
@@ -98,7 +95,7 @@ export function ContactSection() {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3"
+            className="w-full bg-gray-300 hover:bg-gray-100 text-black font-medium py-3"
             size="lg"
           >
             {isSubmitting ? (

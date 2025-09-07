@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Github } from "lucide-react"
+import Link from "next/link"
 
 const projects = [
   {
@@ -43,21 +44,13 @@ const projects = [
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-24 px-4 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-bold text-4xl md:text-5xl mb-4 text-black">Featured Projects</h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            A showcase of my recent work and innovative solutions
-          </p>
-        </div>
+    <section id="projects" className="py-8 px-4 bg-customBlack">
+      <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl mb-8 text-gray-300">PROJECTS</h2>
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div
-              key={project.title}
-              className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-200"
-            >
+            <div key={project.title} className="bg-black rounded-lg border border-white/20 overflow-hidden hover:shadow-lg transition-shadow duration-200">
               <div className="relative overflow-hidden">
                 <img
                   src={project.image || "/placeholder.svg"}
@@ -67,37 +60,33 @@ export function ProjectsSection() {
               </div>
 
               <div className="p-6">
-                <h3 className="font-bold text-xl mb-3 text-black">{project.title}</h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+                <h3 className="font-bold text-gray-200 text-xl mb-3 ">{project.title}</h3>
+                <p className="text-gray-400 mb-4 leading-relaxed">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech) => (
-                    <Badge
-                      key={tech}
-                      variant="outline"
-                      className="text-xs bg-white text-gray-700 border-gray-300 px-2 py-1"
-                    >
+                    <Badge key={tech} variant="outline" className="text-xs bg-customBlack text-gray-500 border border-white/30 px-2 py-1">
                       {tech}
                     </Badge>
                   ))}
                 </div>
 
                 <div className="flex gap-3">
-                  <Button asChild className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium">
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                  <Button asChild className="flex-1 border border-white/30 bg-black hover:text-gray-100 font-medium">
+                    <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer" >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Live Demo
-                    </a>
+                    </Link>
                   </Button>
                   <Button
                     asChild
                     variant="outline"
-                    className="flex-1 border-gray-300 text-gray-700 hover:bg-gray-50 bg-transparent"
+                    className="flex-1 border  border-white/30 text-gray-300 group hover:bg-gray-50 bg-transparent"
                   >
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4 mr-2" />
+                    <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-gray-300">
+                      <Github className="text-gray-200 group-hover:text-gray-900 w-4 h-4 mr-2" />
                       GitHub
-                    </a>
+                    </Link>
                   </Button>
                 </div>
               </div>
