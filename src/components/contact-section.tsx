@@ -36,7 +36,7 @@ export function ContactSection() {
   }
 
   return (
-    <section className="py-24 px-4 bg-customBlack">
+    <section className="py-24 max-w-4xl mx-auto border-x border-white/20 px-12" id="contact">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl mb-4 text-gray-300">Get In Touch</h2>
@@ -55,7 +55,7 @@ export function ContactSection() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className=" border border-white/10"
+                className=" border border-white/10 text-gray-200 outline-none"
                 placeholder="Your name"
               />
             </div>
@@ -70,14 +70,14 @@ export function ContactSection() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="border border-white/10"
+                className="border border-white/10 text-gray-200 focus:outline-none"
                 placeholder="your.email@example.com"
               />
             </div>
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium mb-2 text-gray-400">
+            <label htmlFor="message" className="block text-sm font-medium mb-2 text-gray-300">
               Message
             </label>
             <Textarea
@@ -87,7 +87,7 @@ export function ContactSection() {
               onChange={handleChange}
               required
               rows={5}
-              className="border-1 border-white/10 focus:outline-none resize-none"
+              className="border-1 border-white/10 focus:outline-none resize-none text-gray-200"
               placeholder="Tell me about your project..."
             />
           </div>

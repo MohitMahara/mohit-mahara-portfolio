@@ -6,12 +6,14 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen w-full bg-customBlack">
+      <div className="max-w-5xl mx-auto border-x border-white/20 px-6">
       <HeroSection />
       <TechStackSection />
       <ProjectsSection />
       <ContactSection />
       <Footer />
+      </div>
     </main>
   )
 }
