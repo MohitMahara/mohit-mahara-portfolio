@@ -84,7 +84,7 @@ export function HeroSection() {
           </p>
         </div>
 
-         <div className="w-full py-10 px-4 md:px-10">
+         <div className="w-full pt-10 pb-6 px-4 md:px-10">
           <ContributionGraph platform="github" username="mohitmahara" />
          </div>
 
