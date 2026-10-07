@@ -125,6 +125,23 @@
 }
 
 
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.divider {
+  border-top: 2px dashed #25262a;
+}
+
 .bg-customBlack{
-  background-color: #07060c;
+  background-color: #0A0A0A;
+}
+
+.bg-customBlack2{
+  background-color: #18181B;
 }

@@ -6,25 +6,35 @@ import { FaGithub, FaFileAlt } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 import Link from "next/link"
+import coverImg from "@/assets/heroSection/cover-img.jpg";
+import ContributionGraph from "./contributionGraph";
+
 
 
 export function HeroSection() {
 
   return (
     <>
-      <Header />
-      <section className="pt-30 pb-12 max-w-4xl mx-auto border-x border-white/20 px-12">
-        <div className="flex flex-col md:flex-row gap-2">
-          <div className="flex justify-center items-center">
-            <Image src={"/profile.jpg"} width={60} height={50} alt="Mohit_IMG" className="w-48 w-48 rounded-full" />
+      {/* <Header /> */}
+      <section className="pb-12 max-w-4xl mx-auto">
+        {/* Cover Image Section */}
+        <div className="w-full h-[150px] md:h-[250px]">
+           <Image src={coverImg.src} alt="Cover Image" height={34} width={100} className="w-full h-full object-cover" />
+        </div>
+       
+        {/* Profile Image */}
+        <div className="relative w-full h-20 md:h-30 px-4 md:px-10">
+          <Image src={"/profile.jpg"} width={38} height={38} alt="Mohit_IMG" className="w-28 h-28 md:h-38 md:w-38 rounded-full absolute -top-10" />
+        </div>
+        
+        {/* Headline */}
+        <div className="px-4 md:px-10 flex flex-col md:flex-row justify-between gap-4">          
+          <div className="flex flex-col justify-start">
+            <h1 className="text-xl md:text-3xl mb-2 text-white">Mohit Mahara</h1>
+            <p className="text-md text-gray-500 mb-2">Software Developer</p>
           </div>
-          <div className="flex flex-col justify-start p-6">
-            <h1 className="text-2xl md:text-4xl mb-3 text-white">Hey, I'm Mohit Mahara</h1>
-            <p className="text-md text-gray-500 mb-6">Software Developer</p>
-            <p className="text-md text-gray-400 mb-6">
-              Crafting exceptional digital experiences through clean code and thoughtful design
-            </p>
-            <ul className="grid grid-cols-2 md:grid-cols-5 text-gray-700 py-2">
+
+          <ul className="grid grid-cols-2 md:grid-cols-4 text-gray-700">
               <Link
                 href="https://github.com/mohitmahara"
                 target="_blank"
@@ -53,7 +63,6 @@ export function HeroSection() {
                 <SiLeetcode className="w-4 h-4" />
                 <span className="text-sm font-semibold">Leetcode</span>
               </Link>
-
               <Link
                 href="https://drive.google.com/file/d/1pR6x7VnHENB6LwbvhIpEwcp1-lC5BxCT/view?usp=drive_link"
                 target="_blank"
@@ -62,15 +71,23 @@ export function HeroSection() {
                 <FaFileAlt className="w-4 h-4" />
                 <span className="text-sm font-semibold">Resume</span>
               </Link>
-            </ul>
+          </ul>
+        </div>
 
-          </div>
+        <div className="h-[1px] my-2 w-full divider"></div>
+       
+        {/* About Me */}
+        <div className="text-gray-400 pt-2 px-4 md:px-10 text-[12px] md:text-[16px]">
+          <p className="font-bold mb-1">I like building things from scratch.</p>
+          <p className="leading-relaxed"> I work across frontend, backend, and AI to turn ideas into working products. I enjoy figuring things out as I go, and I believe in learning by doing.
+            For me, it's not really about sticking to one technology. I just like learning whatever I need to build something properly, ship it, and keep improving it.
+          </p>
         </div>
-        <div className="text-gray-300">
-          <div className="text-gray-400 pt-2">
-            <p className="mt-2">I’m a final-year BCA student passionate about full-stack web development. I love creating responsive, user-friendly websites that balance clean design with solid back-end functionality. Skilled in HTML, CSS, JavaScript, React, Node.js, and databases, I enjoy turning ideas into complete, working projects.</p>
-          </div>
-        </div>
+
+         <div className="w-full py-10 px-4 md:px-10">
+          <ContributionGraph platform="github" username="mohitmahara" />
+         </div>
+
       </section>
     </>
   )

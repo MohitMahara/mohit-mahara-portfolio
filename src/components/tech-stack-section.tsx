@@ -15,7 +15,7 @@ const technologies = [
 
 export function TechStackSection() {
   return (
-    <section className="py-12 max-w-4xl mx-auto border-x border-white/20 px-12" id="stack">
+    <section className="py-12 max-w-4xl mx-auto px-4 md:px-10" id="stack">
       <div>
           <h2 className="text-3xl mb-8 text-gray-300">TECH STACK</h2>
 

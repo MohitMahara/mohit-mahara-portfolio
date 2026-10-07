@@ -20,6 +20,9 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Mohit Mahara - Full Stack Developer",
   description: "Personal portfolio showcasing modern web development projects and skills",
+  icons : {
+    icon : "./profile.jpg"
+  }
 }
 
 export default function RootLayout({
