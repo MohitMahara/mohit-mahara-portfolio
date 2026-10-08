@@ -10,7 +10,6 @@ import coverImg from "@/assets/heroSection/cover-img.jpg";
 import ContributionGraph from "./contributionGraph";
 
 
-
 export function HeroSection() {
 
   return (
