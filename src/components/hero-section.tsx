@@ -8,6 +8,7 @@ import { SiLeetcode } from "react-icons/si";
 import Link from "next/link"
 import coverImg from "@/assets/heroSection/cover-img.jpg";
 import ContributionGraph from "./contributionGraph";
+import { contactData } from "@/data/contactData";
 
 
 export function HeroSection() {
@@ -33,47 +34,23 @@ export function HeroSection() {
             <p className="text-md text-gray-500 mb-2">Software Developer</p>
           </div>
 
-          <ul className="grid grid-cols-2 md:grid-cols-4 text-gray-700">
-              <Link
-                href="https://github.com/mohitmahara"
+          <ul className="flex flex-row gap-4 md:gap-6">
+            {contactData.map(({href, icon : Icon}) => {
+              return (
+                <Link
+                href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex gap-2 p-2 text-gray-400 hover:text-gray-100 hover:scale-110 transition-all duration-200"
+                className="hover:scale-110 transition-all duration-200"
               >
-                <FaGithub className="w-4 h-4" />
-                <span className="text-sm font-semibold">GitHub</span>
+                <Icon className="size-4 text-white transition-colors duration-200 group-hover:text-white/80"></Icon>
               </Link>
-              <Link
-                href="https://linkedin.com/in/mohit-mahara/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex gap-2  p-2 text-gray-400 hover:text-gray-100 hover:scale-110 transition-all duration-200"
-              >
-                <FaLinkedin className="w-4 h-4" />
-                <span className="text-sm font-semibold">Linkedin</span>
-
-              </Link>
-              <Link
-                href="https://leetcode.com/u/Mohit_671/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex gap-2 p-2 text-gray-400 hover:text-gray-100 hover:scale-110 transition-all duration-200"
-              >
-                <SiLeetcode className="w-4 h-4" />
-                <span className="text-sm font-semibold">Leetcode</span>
-              </Link>
-              <Link
-                href="https://drive.google.com/file/d/1pR6x7VnHENB6LwbvhIpEwcp1-lC5BxCT/view?usp=drive_link"
-                target="_blank"
-                className="flex gap-2 p-2 text-gray-400 hover:text-gray-100 hover:scale-110 transition-all duration-200"
-              >
-                <FaFileAlt className="w-4 h-4" />
-                <span className="text-sm font-semibold">Resume</span>
-              </Link>
+              )
+            })}
           </ul>
         </div>
 
-        <div className="h-[1px] my-2 w-full divider"></div>
+        <div className="my-4 w-full divider"></div>
        
         {/* About Me */}
         <div className="text-gray-400 pt-2 px-4 md:px-10 text-[12px] md:text-[16px]">

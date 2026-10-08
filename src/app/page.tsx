@@ -1,8 +1,7 @@
 import { HeroSection } from "@/components/hero-section"
 import TechStackSection  from "@/components/tech-stack-section"
 import { ProjectsSection } from "@/components/projects-section"
-import { ContactSection } from "@/components/contact-section"
-import { Footer } from "@/components/footer"
+import Footer from "@/components/footer"
 import WorkSection from "@/components/work-section"
 
 export default function Home() {
@@ -13,7 +12,6 @@ export default function Home() {
           <WorkSection/>
           <TechStackSection />
           <ProjectsSection />
-          <ContactSection />
           <Footer />
       </main>
     </div>
