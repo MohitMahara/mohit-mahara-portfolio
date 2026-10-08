@@ -6,7 +6,7 @@ import { technologies } from "@/data/skillsData";
 export default function TechStackSection() {
   return (
     <section className="py-10 max-w-4xl mx-auto px-4 md:px-10" id="skills">
-      <h2 className="mb-8 text-lg font-semibold text-white">
+      <h2 className="mb-8 text-xl font-semibold text-white">
         Skills & Technologies
       </h2>
 

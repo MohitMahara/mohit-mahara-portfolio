@@ -1,6 +1,7 @@
 import EzCartProjectImg from "@/assets/projects/ezcart.png"
 import RydzImg from "@/assets/projects/rydz.png";
 import FraudShieldImg from "@/assets/projects/fraudshield.png"
+import DelhiOSRMImg from "@/assets/projects/delhi-osrm-img.jpg"
 
 export const projects = [
 
@@ -25,10 +26,10 @@ export const projects = [
     title: "Self Hosted Routing Engine",
     description:
       "RESTful API for social media platform with authentication, posts, comments, and real-time notifications.",
-    image: "/api-documentation-dark-theme.png",
+    image: DelhiOSRMImg.src,
     tech: ["Node.js", "Express", "JWT", "PostgreSQL"],
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://github.com/MohitMahara/OSRM-Routing-Engine-Delhi",
+    githubUrl: "https://github.com/MohitMahara/OSRM-Routing-Engine-Delhi",
   },
   {
     title: "EZCart",

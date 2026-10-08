@@ -5,9 +5,11 @@ import { projects } from "@/data/projectsData"
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="max-w-4xl mx-auto px-4 md:px-10 py-12">
+    <section id="projects" className="max-w-4xl mx-auto px-4 md:px-10 py-10">
       <div>
-        <h2 className="text-3xl mb-8 text-gray-300">PROJECTS</h2>
+        <h2 className="mb-8 text-xl font-semibold text-white">
+         Projects
+        </h2>
 
         <div className="grid md:grid-cols-2 gap-8 px-6">
           {projects.map((project, index) => (

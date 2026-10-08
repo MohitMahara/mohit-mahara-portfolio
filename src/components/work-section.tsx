@@ -15,7 +15,7 @@ export default function WorkSection() {
 
   return (
     <section className="py-10 max-w-4xl mx-auto px-4 md:px-10" id="work">
-      <h2 className="mb-7 text-lg font-semibold text-white">
+      <h2 className="mb-7 text-xl font-semibold text-white">
         Work
       </h2>
 
