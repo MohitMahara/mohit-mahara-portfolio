@@ -16,7 +16,7 @@ export function HeroSection() {
   return (
     <>
       {/* <Header /> */}
-      <section className="pb-12 max-w-4xl mx-auto">
+      <section className="pb-8 max-w-4xl mx-auto">
         {/* Cover Image Section */}
         <div className="w-full h-[150px] md:h-[250px]">
            <Image src={coverImg.src} alt="Cover Image" height={34} width={100} className="w-full h-full object-cover" />
@@ -84,7 +84,7 @@ export function HeroSection() {
           </p>
         </div>
 
-         <div className="w-full pt-10 pb-6 px-4 md:px-10">
+         <div className="w-full pt-10 px-4 md:px-10">
           <ContributionGraph platform="github" username="mohitmahara" />
          </div>
 
