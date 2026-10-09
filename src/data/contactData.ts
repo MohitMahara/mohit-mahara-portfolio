@@ -23,7 +23,7 @@ export const contactData = [
   },
   {
     name: "X",
-    href: "",
+    href: "https://x.com/@_just_mohit",
     icon: SiX,
   },
   {
@@ -38,7 +38,7 @@ export const contactData = [
   },
   {
     name: "Resume",
-    href: "https://drive.google.com/file/d/1pR6x7VnHENB6LwbvhIpEwcp1-lC5BxCT/view?usp=drive_link",
+    href: "https://drive.google.com/file/d/1pR17oe6_MYiYeAqQKYpuwfPxcTC0z6Yw/view?usp=sharing",
     icon: Paperclip,
   },
 ];
